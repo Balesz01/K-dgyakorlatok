@@ -56,6 +56,28 @@ namespace Kódgyakorlatok
             }
             Console.WriteLine($"A szövegek tömbben: {darab} szóban van 'u'");
             Console.ReadLine();
+
+            //2 dimenziós tömb
+            //ha az elem egyetlen sorszámmal azonosítható a tömbbrn akkor az egydimenziós tömb (tulajdonkép elemek egyszerű sora)
+            //ha azonosításhoz két indexet használunk akkor kétdimenziós tömb (olyan mint a táblázat)
+            int[,] tablazat = new int[2,3];
+            //adjuk meg egyesével
+            tablazat[0,0] = 1;
+            tablazat[0,1] = 2;
+            tablazat[0,2] = 3;
+            tablazat[1,0] = 5;
+            tablazat[1,1] = 6;
+            tablazat[1,2] = 7;
+
+            for (int i = 0; i < tablazat.GetLength(0); i++)
+            {
+                for (int j = 0; j < tablazat.GetLength(1); j++)
+                {
+                    Console.Write($"{tablazat[i,j]} ");
+                }
+                Console.WriteLine();
+            }
+            
         }
     }
 }
