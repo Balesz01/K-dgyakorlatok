@@ -77,7 +77,35 @@ namespace Kódgyakorlatok
                 }
                 Console.WriteLine();
             }
+
+            //3. feladat
+            //Kérjünk be két, 2 és 10 közé eső egsz számot a felhasználótól(n és m)
+            //Hozzunk létre egy n sorból és m oszlopból álló kétdimenziós tömböt
+            //Töltsük fel a tömböt egyjegyű pozitív véletlenszámokkal és írjuk ki mátrix szerűen a képernyőre.
+            //Készítsünk GitHub repót, ennek a linkjét kell ladni a feladathoz.
+
+            Random uj = new Random();
             
+            Console.WriteLine("Adj meg 2 és 10 közé eső egsz számot:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Adj meg 2 és 10 közé eső egsz számot:");
+            int m = Convert.ToInt32(Console.ReadLine());
+            int[,] tomb = new int[n, m];
+            for (int i = 0; i < tomb.GetLength(0); i++)
+            {
+                for (int j = 0; j < tomb.GetLength(1); j++)
+                {
+                    tomb[i, j] = uj.Next(1, 10);
+                }
+            }
+            for (int i = 0; i < tomb.GetLength(0); i++)
+            {
+                for (int j = 0; j < tomb.GetLength(1); j++)
+                {
+                    Console.Write($"{tomb[i, j]} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
