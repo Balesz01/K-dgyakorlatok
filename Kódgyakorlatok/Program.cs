@@ -42,6 +42,20 @@ namespace Kódgyakorlatok
             Console.WriteLine($"A legnagyobb szám a tömbben: {maxszam}");
             Console.WriteLine($"A legkisebb elem a tömbben: {kisszam}");
             Console.ReadLine();
+
+            //2.Készíts egy szövegeket tartalmazó hét elemű tömböt. Állapítsd meg hány olyan szöveg van a tömbben, amiben van u betű!
+
+            string[] szoveg = new string[7] {"valami","kuka","tegnap","dunka","marlon","lacy","pdd"};
+            int darab = 0;
+            foreach (var item in szoveg)
+            {
+                if (item.Contains("u") || item.Contains("U"))
+                {
+                    darab++;
+                }
+            }
+            Console.WriteLine($"A szövegek tömbben: {darab} szóban van 'u'");
+            Console.ReadLine();
         }
     }
 }
